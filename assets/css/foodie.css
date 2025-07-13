@@ -231,9 +231,6 @@ body.active{overflow: hidden;}
   color: var(--deep-saffron);
 }
 
-
-
-
 /*-----------------------------------*\
   #SEARCH BOX
 \*-----------------------------------*/
@@ -381,15 +378,18 @@ body.active{overflow: hidden;}
   background-color: var(--white);
   padding-inline: 20px;
   box-shadow: var(--shadow-1);
-  height: 0;
-  width: calc(50% - 50px);
+  max-height: 0;
+  max-width: calc(100% - 50px);
+  width: 100%;
   overflow: hidden;
   visibility: hidden;
   transition: var(--transition-1);
+  border-radius: 18px;
 }
 .navbar.active{
-  height: 400px;
+  max-height: 400px;
   visibility: visible;
+  transition-duration: 0.5s;
 }
 .navbar-list{margin-block: 10px;}
 .nav-item:not(:last-child){
